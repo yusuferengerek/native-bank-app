@@ -42,11 +42,9 @@ utils/
  └── formatCurrency.ts
 ```
 
-## Interactive Preview
+## 🎮 Interactive Preview
 
 Check out an interactive preview of the app here: [Interactive Preview]()
-
----
 
 ## 🚀 Getting Started
 
