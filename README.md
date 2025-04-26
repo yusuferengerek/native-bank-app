@@ -57,10 +57,10 @@ cd native-bank-app
 npm install
 ```
 
-3. **Run the app:**
+3. **Run the app (for test):**
 
 ```bash
-npm start
+npx expo start
 ```
 
 Then use the Expo Go app on your device or an emulator to view the app.
