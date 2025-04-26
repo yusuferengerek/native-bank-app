@@ -1,92 +1,50 @@
-# Native Bank App
+# Welcome to your Expo app 👋
 
-A simple **React Native** bank app built with **Expo Router**, **NativeWind**, and **TailwindCSS**.  
-This project allows users to view their balance, track transactions, and navigate through different tabs like Home, History, Settings, and more.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## ✨ Features
+## Get started
 
-- View account balance, expenses, and incomes
-- History of transactions
-- Profile and settings tabs
-- Responsive design with TailwindCSS (NativeWind)
-- Utility functions for currency formatting and calculations
-- Smooth navigation with React Navigation
-- Developed using Expo for easy cross-platform deployment
+1. Install dependencies
 
-## 🛠 Tech Stack
+   ```bash
+   npm install
+   ```
 
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.dev/)
-- [Expo Router](https://expo.github.io/router/)
-- [NativeWind (TailwindCSS for React Native)](https://www.nativewind.dev/)
-- [React Navigation](https://reactnavigation.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+2. Start the app
 
-## 📁 Project Structure
+   ```bash
+    npx expo start
+   ```
 
-```
-app/
- ├── (tabs)/         # Tab screens: Home, History, Settings
- ├── _layout.tsx     # Main app layout
- ├── globals.css     # Global styles
- └── index.tsx       # Entry point for the router
+In the output, you'll find options to open the app in a
 
-data/
- ├── profile.ts      # User profile data
- └── transactions.ts # Mock transaction data
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-utils/
- ├── calculateBalance.ts
- ├── calculateExpenses.ts
- ├── calculateIncomes.ts
- └── formatCurrency.ts
-```
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## 🚀 Getting Started
+## Get a fresh project
 
-1. **Clone the repository:**
+When you're ready, run:
 
 ```bash
-git clone https://github.com/your-username/native-bank-app.git
-cd native-bank-app
+npm run reset-project
 ```
 
-2. **Install dependencies:**
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-```bash
-npm install
-```
+## Learn more
 
-3. **Run the app (for test):**
+To learn more about developing your project with Expo, look at the following resources:
 
-```bash
-npx expo start
-```
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-Then use the Expo Go app on your device or an emulator to view the app.
+## Join the community
 
-## 🔥 Available Scripts
+Join our community of developers creating universal apps.
 
-- `npm start` - Start the development server
-- `npm run android` - Run the app on Android
-- `npm run ios` - Run the app on iOS
-- `npm run web` - Run the app in the web browser
-- `npm run lint` - Lint the code
-- `npm run test` - Run tests
-
-## 📦 Dependencies
-
-Main libraries used:
-
-- Expo
-- React Native
-- Expo Router
-- NativeWind
-- React Navigation
-- TailwindCSS
-- TypeScript
-- Jest (for testing)
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
