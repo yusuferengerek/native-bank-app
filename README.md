@@ -1,4 +1,4 @@
-# Native Bank App
+# React Native Banking App
 
 A simple **React Native** bank app built with **Expo Router**, **NativeWind**, and **TailwindCSS**.  
 This project allows users to view their balance, track transactions, and navigate through different tabs like Home, History, Settings, and more.
@@ -85,8 +85,8 @@ utils/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yusuferengerek/native-bank-app.git
-cd native-bank-app
+git clone https://github.com/yusuferengerek/react-native-banking-app.git
+cd react-native-banking-app
 ```
 
 2. **Install dependencies:**
