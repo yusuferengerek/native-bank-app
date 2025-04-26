@@ -14,7 +14,7 @@ export default [
     id: 2,
     title: 'Salary Payment',
     subtitle: 'Company XYZ',
-    amount: 1500.00,
+    amount: 2500.00,
     type: 'income',
     date: '2025-04-20T09:00',
     color: 'bg-green-100',

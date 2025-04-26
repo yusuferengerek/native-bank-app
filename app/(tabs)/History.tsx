@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StatusBar, TextInput } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { View, ScrollView, StatusBar } from 'react-native';
 import transactions from '@/data/transactions';
-import formatCurrency from '@/utils/formatCurrency';
+import { Header } from '@/components/Header';
+import { SearchBar } from '@/components/SearchBar';
+import { FilterChip } from '@/components/FilterChip';
+import { TransactionItem } from '@/components/TransactionItem';
 
 export default function History() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -10,86 +12,76 @@ export default function History() {
 
   const filteredTransactions = transactions
     .filter(transaction => {
-      const matchesSearch = transaction.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          transaction.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesSearch = 
+      transaction.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      transaction.subtitle.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesFilter = filter === 'all' || transaction.type === filter;
       return matchesSearch && matchesFilter;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <View className="flex-1 bg-white">
+    <View className="flex-1 bg-white pt-10">
       <StatusBar barStyle="dark-content" />
       
-      <View className="px-6 pt-14 pb-5">
-        <Text className="text-2xl font-bold">Transaction History</Text>
+      <Header 
+        title="Transaction History" 
+        className="mx-6 pt-0 pb-2"
+      />
+
+      <View className="mx-6 mt-4 mb-4">
+        <SearchBar
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+          placeholder="Search transactions..."
+        />
       </View>
 
-      <View className="px-6 mb-4">
-        <View className="flex-row items-center bg-gray-50 rounded-xl px-4 py-3">
-          <Ionicons name="search" size={20} color="#6b7280" />
-          <TextInput
-            className="flex-1 ml-2 text-gray-800"
-            placeholder="Search transactions..."
-            value={searchQuery}
-            onChangeText={setSearchQuery}
-          />
-        </View>
-      </View>
-
-      <View className="flex-row justify-around px-6 mb-6">
-        <TouchableOpacity
-          className={`px-4 py-2 rounded-full ${filter === 'all' ? 'bg-blue-100' : 'bg-gray-50'}`}
+      <View className="flex-row justify-center my-2 mx-6">
+        <FilterChip
+          label="All"
+          isActive={filter === 'all'}
           onPress={() => setFilter('all')}
-        >
-          <Text className={`font-medium ${filter === 'all' ? 'text-blue-600' : 'text-gray-600'}`}>All</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          className={`px-4 py-2 rounded-full ${filter === 'income' ? 'bg-green-100' : 'bg-gray-50'}`}
+          activeColorClass="bg-blue-100"
+          activeTextColorClass="text-blue-600"
+          className="flex"
+        />
+        <FilterChip
+          label="Income"
+          isActive={filter === 'income'}
           onPress={() => setFilter('income')}
-        >
-          <Text className={`font-medium ${filter === 'income' ? 'text-green-600' : 'text-gray-600'}`}>Income</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          className={`px-4 py-2 rounded-full ${filter === 'expense' ? 'bg-red-100' : 'bg-gray-50'}`}
+          activeColorClass="bg-green-100"
+          activeTextColorClass="text-green-600"
+          className="flex"
+        />
+        <FilterChip
+          label="Expenses"
+          isActive={filter === 'expense'}
           onPress={() => setFilter('expense')}
-        >
-          <Text className={`font-medium ${filter === 'expense' ? 'text-red-600' : 'text-gray-600'}`}>Expenses</Text>
-        </TouchableOpacity>
+          activeColorClass="bg-red-100"
+          activeTextColorClass="text-red-600"
+          className="flex"
+        />
       </View>
 
-      <ScrollView className="flex-1 px-6" showsVerticalScrollIndicator={false}>
+      <ScrollView 
+        className="mx-6 mt-4"
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 24 }}
+      >
         {filteredTransactions.map((transaction) => (
-          <View
+          <TransactionItem
             key={transaction.id}
-            className="bg-white rounded-2xl p-4 mb-3 shadow-sm border border-gray-50"
-          >
-            <View className="flex-row items-center justify-between">
-              <View className="flex-row items-center">
-                <View className={`${transaction.color} w-12 h-12 rounded-2xl items-center justify-center mr-4`}>
-                  <Ionicons name={transaction.icon as any} size={22} color={transaction.iconColor} />
-                </View>
-                <View>
-                  <Text className="font-semibold text-gray-800">{transaction.title}</Text>
-                  <Text className="text-gray-400 text-xs mt-0.5">{transaction.subtitle}</Text>
-                </View>
-              </View>
-              <View className="items-end">
-                <Text className={`font-bold ${transaction.type === 'expense' ? 'text-red-600' : 'text-green-600'}`}>
-                  {transaction.type === 'expense' ? '- ' : '+ '}{formatCurrency({ amount: transaction.amount })}
-                </Text>
-                <Text className="text-gray-400 text-xs mt-0.5">
-                  {new Date(transaction.date).toLocaleDateString('tr-TR', {
-                    day: '2-digit',
-                    month: '2-digit',
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                  })}
-                </Text>
-              </View>
-            </View>
-          </View>
+            id={String(transaction.id)}
+            title={transaction.title}
+            subtitle={transaction.subtitle}
+            amount={transaction.amount}
+            date={transaction.date}
+            type={transaction.type as 'income' | 'expense'}
+            icon={transaction.icon}
+            iconColor={transaction.iconColor}
+            color={transaction.color}
+          />
         ))}
       </ScrollView>
     </View>
