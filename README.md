@@ -44,7 +44,7 @@ utils/
 
 ## 🎮 Interactive Preview
 
-Check out an interactive preview of the app here: [Interactive Preview]()
+Check out an interactive preview of the app here: [Interactive Preview](https://react-native-banking-app--5j2lt3yh57.expo.app/)
 
 ## 🚀 Getting Started
 
