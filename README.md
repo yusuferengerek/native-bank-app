@@ -55,7 +55,7 @@ utils/
 
 ### 📜 History Screen
 <div align="center">
-  <img src="./screenshots/history.jpg" alt="History Screen" width="300"/>
+  <img src="./screenshots/transactions.jpg" alt="History Screen" width="300"/>
 </div>
 
 > Shows a list of past transactions with details like date, amount, and type.
