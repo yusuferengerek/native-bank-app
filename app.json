@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-bank-app",
-    "slug": "native-bank-app",
+    "name": "react-native-banking-app",
+    "slug": "react-native-banking-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
