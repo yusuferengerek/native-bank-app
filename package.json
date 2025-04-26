@@ -1,5 +1,5 @@
 {
-  "name": "native-bank-app",
+  "name": "react-native-banking-app",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
