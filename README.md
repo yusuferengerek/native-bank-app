@@ -42,41 +42,9 @@ utils/
  └── formatCurrency.ts
 ```
 
-## 📸 Screenshots
+## Interactive Preview
 
-### 🏠 Home Screen
-<div align="center">
-  <img src="./screenshots/home.jpg" alt="Home Screen" width="300"/>
-</div>
-
-> Displays the current balance, card overview, and quick actions.
-
----
-
-### 💳 Card Details Screen
-<div align="center">
-  <img src="./screenshots/card-details.jpg" alt="Card Details Screen" width="300"/>
-</div>
-
-> Displays detailed information about the selected bank card, including balance and transaction limits.
-
----
-
-### 📜 History Screen
-<div align="center">
-  <img src="./screenshots/transactions.jpg" alt="History Screen" width="300"/>
-</div>
-
-> Shows a list of past transactions with details like date, amount, and type.
-
----
-
-### ⚙️ Settings Screen
-<div align="center">
-  <img src="./screenshots/settings.jpg" alt="Settings Screen" width="300"/>
-</div>
-
-> Allows users to manage preferences and account settings.
+Check out an interactive preview of the app here: [Interactive Preview]()
 
 ---
 
