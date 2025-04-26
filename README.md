@@ -53,6 +53,15 @@ utils/
 
 ---
 
+### 💳 Card Details Screen
+<div align="center">
+  <img src="./screenshots/card-details.jpg" alt="Card Details Screen" width="300"/>
+</div>
+
+> Displays detailed information about the selected bank card, including balance and transaction limits.
+
+---
+
 ### 📜 History Screen
 <div align="center">
   <img src="./screenshots/transactions.jpg" alt="History Screen" width="300"/>
@@ -68,15 +77,6 @@ utils/
 </div>
 
 > Allows users to manage preferences and account settings.
-
----
-
-### 💳 Card Details Screen
-<div align="center">
-  <img src="./screenshots/card-details.jpg" alt="Card Details Screen" width="300"/>
-</div>
-
-> Displays detailed information about the selected bank card, including balance and transaction limits.
 
 ---
 
