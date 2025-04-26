@@ -46,7 +46,7 @@ utils/
 
 ### 🏠 Home Screen
 <div align="center">
-  <img src="./screenshots/home.png" alt="Home Screen" width="300"/>
+  <img src="./screenshots/home.jpg" alt="Home Screen" width="300"/>
 </div>
 
 > Displays the current balance, card overview, and quick actions.
@@ -55,7 +55,7 @@ utils/
 
 ### 📜 History Screen
 <div align="center">
-  <img src="./screenshots/history.png" alt="History Screen" width="300"/>
+  <img src="./screenshots/history.jpg" alt="History Screen" width="300"/>
 </div>
 
 > Shows a list of past transactions with details like date, amount, and type.
@@ -64,7 +64,7 @@ utils/
 
 ### ⚙️ Settings Screen
 <div align="center">
-  <img src="./screenshots/settings.png" alt="Settings Screen" width="300"/>
+  <img src="./screenshots/settings.jpg" alt="Settings Screen" width="300"/>
 </div>
 
 > Allows users to manage preferences and account settings.
@@ -73,7 +73,7 @@ utils/
 
 ### 💳 Card Details Screen
 <div align="center">
-  <img src="./screenshots/card-details.png" alt="Card Details Screen" width="300"/>
+  <img src="./screenshots/card-details.jpg" alt="Card Details Screen" width="300"/>
 </div>
 
 > Displays detailed information about the selected bank card, including balance and transaction limits.
